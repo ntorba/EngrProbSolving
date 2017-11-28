@@ -1,0 +1,20 @@
+{% extends 'base_engr1102.html' %}
+{% load staticfiles %} <!-- this may not be needed for this but if I load things like images here this will be needed -->
+{% block title %}
+  About - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+  <h1> Intro to Enineering Problem solving is a pioneering class <h1>
+  <p> Our efforts are based around pushing students to create and release real projects </p>
+{% endblock content %}
+
+{% block footer %}
+  <p2> In this website you can see the projects our students have made<br>
+   This year we have: </p2>
+  <ul>
+    <li> An iOS app to... </li>
+    <li> An Android app to.. </li>
+    <li> A game written in python on this cite </li>
+  </ul>
+{% endblock footer %}

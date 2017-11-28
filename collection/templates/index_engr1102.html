@@ -1,0 +1,23 @@
+{% extends 'base_engr1102.html' %}
+{% load staticfiles %}
+{% block title %}
+  Homepage - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+  <h1> Welcome to TU Engineering Problem solving <h1>
+  <p1> Learn about us!! </p1>
+  {% for project in projects %}
+    <h2> <a href="{% url 'project_detail' slug=project.slug %}">
+         {{ project.name }}
+    </a></h2>
+  <p2> {{ project.description }} </p2>
+  {% endfor %}
+{% endblock content %}
+
+{% block footer %}
+<link rel="stylesheet" href="{% static 'css/style_engr1102.css' %}" />
+<p> </p>
+<img src= "{% static 'images/fractal_ex.jpg' %}" alt=""/>
+<img src="{% static 'forLoopFlow.png' %}" alt=""/>
+{% endblock footer %}

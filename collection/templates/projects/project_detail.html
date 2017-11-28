@@ -1,0 +1,18 @@
+{% extends 'base_engr1102.html' %}
+{% load staticfiles %}
+{% block title %}
+  {{ project.name }} - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+  <h1> {{ project.name }} <h1>
+  <p> {{ project.description }} </p>
+  <a href="{% url 'edit_project' slug=project.slug %}">
+    Edit me!
+  </a>
+{% endblock content%}
+
+{% block footer %}
+<p> </p>
+<img src= "{% static 'images/templeT.png' %}" alt=""/>
+{% endblock footer %}

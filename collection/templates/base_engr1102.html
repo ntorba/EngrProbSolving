@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<!doctype html>
+<html>
+<head>
+  <title>
+    {% block title %}
+      TU Engineering Problem Solving
+    {% endblock title %}
+  </title>
+  <link rel="stylesheet" href="{% static 'css/style_engr1102.css' %}" />
+  {% block header %}{% endblock header %}
+</head>
+<body>
+  <header>
+    <h1>TU Engineering Problem Solving</h1>
+    <nav>
+      <ul>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}" target="_blank"><img src="{% static 'images/helloworld.jpg' %}" alt=""/> About(target attribute here) </a></li>
+        <li><a href="{% url 'contact' %}">Contact</a></li>
+        <li><a href="{% url 'projects' %}"> Projects </a></li>
+        <li><a href="{% url 'forloops' %}"> For Loops </a></li>
+      </ul>
+    </nav>
+</header>
+  {% block content %}{% endblock content %}
+  {% block footer %}{% endblock footer %}
+</body>
+</html>

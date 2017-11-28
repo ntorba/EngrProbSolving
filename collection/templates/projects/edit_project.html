@@ -1,0 +1,13 @@
+{% extends 'base_engr1102.html' %}
+{% block title %}
+  Edit {{ project.name }} - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+  <h1>Edit "{{ project.name }}"</h1>
+  <form role="form" action="" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Submit</button>
+  </form>
+{% endblock %}

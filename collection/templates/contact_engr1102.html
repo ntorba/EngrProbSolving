@@ -1,0 +1,33 @@
+{% extends 'base_engr1102.html' %}
+{% load staticfiles %} <!-- this may not be needed for this but if I load things like images here this will be needed -->
+{% block title %}
+  Contact Us - {{ block.super }}
+{% endblock title %}
+
+{% block content %}
+  <h1> Class run by Dr. Ferrar <h1>
+  <p> email: </p>
+{% endblock content %}
+
+{% block footer %}
+<table>
+  <thead>
+  <tr>
+    <th scope = "col" > this title </th>
+    <th scope = "col"> Company Name </th>
+    <th scope = "col"> Another Title</th>
+  </tr>
+</thead>
+
+  <tr>
+    <th scope="row"> iOS App </th>
+    <td> Tricky </td>
+  </tr>
+
+  <tr>
+    <th scope = "row"> Android App</th>
+  </tr>
+
+</table>
+
+{% endblock footer %}
